@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: InfosJoueurs
   m_EditorClassIdentifier: 
   _nbPoints: 0
-  _tempsDuJoueur: 
+  _tempsDuJoueur: 2:30
