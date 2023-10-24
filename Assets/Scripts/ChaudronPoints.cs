@@ -12,16 +12,17 @@ public class ChaudronPoints : MonoBehaviour
     //Référence au scriptable object 
     [SerializeField] private InfosJoueurs _infosJoueurs;
     [SerializeField] private int _nbPoints;
-    private void OnCollisionEnter(Collision other){
+    private void OnTriggerEnter(Collider other){
 
-       
+       Debug.Log("Test collision");
 
-        if(other.gameObject.tag == "Chaudron"){
+        if(other.gameObject.tag == "Objets"){
+            Debug.Log("Test objet");
 
         //Si le nombre de points est suppérieur à 0 on incrémente les points quand le joueur entre en collision avec un objet 
 
-        if(_nbPoints>0 ){
-            // Debug.Log(_texteNbPoints.text);
+       
+           Debug.Log(_texteNbPoints.text);
             _infosJoueurs._nbPoints += _nbPoints;
            Destroy(other.gameObject);
          
@@ -30,5 +31,5 @@ public class ChaudronPoints : MonoBehaviour
         }         
      }
     }
-}
+
 
